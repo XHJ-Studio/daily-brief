@@ -513,20 +513,25 @@ This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE
 
 ---
 
-## 📞 Contact
+## 📞 Contact / 联系方式
 
+### 🇨🇳 中文
 - **GitHub**: [@XHJ-Studio](https://github.com/XHJ-Studio)
-- **Issues**: [Report bugs & suggest features](https://github.com/XHJ-Studio/daily-brief/issues)
+- **Issues**: [问题反馈](https://github.com/XHJ-Studio/daily-brief/issues)
+
+### 🇺🇸 English
+- **GitHub**: [@XHJ-Studio](https://github.com/XHJ-Studio)
+- **Issues**: [Report Issues](https://github.com/XHJ-Studio/daily-brief/issues)
 
 ---
 
-## 👥 Community
+## 👥 Community / 社群
 
-Join our community group for discussions, updates, and sharing!
+### 🇨🇳 中文
 
-### OpenClaw 中文交流群
+欢迎加入 OpenClaw 中文交流群！
 
-![OpenClaw 中文社群 QR Code](./assets/community-qr.png)
+![OpenClaw 中文社群](./assets/community-qr.png)
 
 **群信息**:
 - 群名：OpenClaw 中文交流群
@@ -534,6 +539,19 @@ Join our community group for discussions, updates, and sharing!
 - 用途：OpenClaw 用户交流、技能分享、问题讨论
 
 *扫码加入 OpenClaw 中文交流群*
+
+### 🇺🇸 English
+
+Welcome to join OpenClaw Chinese Community!
+
+![OpenClaw Community QR Code](./assets/community-qr.png)
+
+**Group Info**:
+- Group Name: OpenClaw Chinese Community
+- Group ID: 1083444634
+- Purpose: OpenClaw user communication, skill sharing, Q&A
+
+*Scan QR code to join the community*
 
 ---
 
