@@ -524,9 +524,16 @@ This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE
 
 Join our community group for discussions, updates, and sharing!
 
-![Community QR Code](./assets/community-qr.png)
+### OpenClaw 中文交流群
 
-*Scan to join our community group*
+![OpenClaw 中文社群 QR Code](./assets/community-qr.png)
+
+**群信息**:
+- 群名：OpenClaw 中文交流群
+- 群号：1083444634
+- 用途：OpenClaw 用户交流、技能分享、问题讨论
+
+*扫码加入 OpenClaw 中文交流群*
 
 ---
 

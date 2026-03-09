@@ -460,9 +460,16 @@ MIT License - 详见 [LICENSE](./LICENSE)
 
 欢迎加入社群交流讨论、分享经验！
 
-![社群二维码](./assets/community-qr.png)
+### OpenClaw 中文交流群
 
-*扫码加入社群*
+![OpenClaw 中文社群](./assets/community-qr.png)
+
+**群信息**:
+- 群名：OpenClaw 中文交流群
+- 群号：1083444634
+- 用途：OpenClaw 用户交流、技能分享、问题讨论
+
+*扫码加入 OpenClaw 中文交流群*
 
 ---
 
