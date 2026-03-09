@@ -515,10 +515,18 @@ This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE
 
 ## 📞 Contact
 
-- **Author**: 小黄鸡工坊 (xhjgfstudio)
-- **Email**: xhjgfstudio@gmail.com
 - **GitHub**: [@XHJ-Studio](https://github.com/XHJ-Studio)
-- **Discord**: 小黄鸡工坊#3232
+- **Issues**: [Report bugs & suggest features](https://github.com/XHJ-Studio/daily-brief/issues)
+
+---
+
+## 👥 Community
+
+Join our community group for discussions, updates, and sharing!
+
+![Community QR Code](./assets/community-qr.png)
+
+*Scan to join our community group*
 
 ---
 

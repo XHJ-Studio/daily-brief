@@ -451,10 +451,18 @@ MIT License - 详见 [LICENSE](./LICENSE)
 
 ## 📞 联系方式
 
-- **作者**: 小黄鸡工坊 (xhjgfstudio)
-- **Email**: xhjgfstudio@gmail.com
 - **GitHub**: https://github.com/XHJ-Studio
-- **Discord**: 小黄鸡工坊#3232
+- **Issues**: https://github.com/XHJ-Studio/daily-brief/issues
+
+---
+
+## 👥 社群
+
+欢迎加入社群交流讨论、分享经验！
+
+![社群二维码](./assets/community-qr.png)
+
+*扫码加入社群*
 
 ---
 
