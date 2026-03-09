@@ -1,0 +1,957 @@
+{
+  "lastUpdated": "2026-03-09T17:15:00+08:00",
+  "version": "1.2.0",
+  "sourceUrl": "https://github.com/JackyST0/awesome-rsshub-routes",
+  "checkTime": "2026-03-09 12:16:25 (北京时间)",
+  "stats": {
+    "total": 145,
+    "valid": 143,
+    "invalid": 2,
+    "successRate": "98.6%",
+    "newsSources": 65
+  },
+  "categories": {
+    "news-global": {
+      "name": "全球综合新闻",
+      "nameEn": "Global News",
+      "priority": 1,
+      "sources": [
+        {
+          "id": "bbc-world",
+          "name": "BBC World News",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+          "language": "en",
+          "country": "UK",
+          "enabled": true,
+          "priority": 1,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "bbc-home",
+          "name": "BBC Home",
+          "url": "https://feeds.bbci.co.uk/news/rss.xml",
+          "language": "en",
+          "country": "UK",
+          "enabled": true,
+          "priority": 2,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "bbc-tech",
+          "name": "BBC Technology",
+          "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+          "language": "en",
+          "country": "UK",
+          "enabled": true,
+          "priority": 3,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "bbc-business",
+          "name": "BBC Business",
+          "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+          "language": "en",
+          "country": "UK",
+          "enabled": true,
+          "priority": 4,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "cnn-top",
+          "name": "CNN Top Stories",
+          "url": "http://rss.cnn.com/rss/edition.rss",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 5,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "cnn-world",
+          "name": "CNN World",
+          "url": "http://rss.cnn.com/rss/edition_world.rss",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 6,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "cnn-tech",
+          "name": "CNN Technology",
+          "url": "http://rss.cnn.com/rss/edition_technology.rss",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 7,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "cnn-business",
+          "name": "CNN Business",
+          "url": "http://money.cnn.com/services/rss/",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 8,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "nytimes-home",
+          "name": "NY Times Home",
+          "url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 9,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "nytimes-world",
+          "name": "NY Times World",
+          "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 10,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "nytimes-tech",
+          "name": "NY Times Technology",
+          "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 11,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "nytimes-business",
+          "name": "NY Times Business",
+          "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 12,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "washingtonpost",
+          "name": "Washington Post",
+          "url": "https://feeds.washingtonpost.com/rss/national",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 13,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "guardian-world",
+          "name": "The Guardian World",
+          "url": "https://www.theguardian.com/world/rss",
+          "language": "en",
+          "country": "UK",
+          "enabled": true,
+          "priority": 14,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "guardian-uk",
+          "name": "The Guardian UK",
+          "url": "https://www.theguardian.com/uk/rss",
+          "language": "en",
+          "country": "UK",
+          "enabled": true,
+          "priority": 15,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "guardian-tech",
+          "name": "The Guardian Technology",
+          "url": "https://www.theguardian.com/technology/rss",
+          "language": "en",
+          "country": "UK",
+          "enabled": true,
+          "priority": 16,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "reuters-world",
+          "name": "Reuters World News",
+          "url": "https://www.reutersagency.com/feed/",
+          "language": "en",
+          "country": "UK",
+          "enabled": true,
+          "priority": 17,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "reuters-business",
+          "name": "Reuters Business",
+          "url": "https://feeds.reuters.com/reuters/businessNews",
+          "language": "en",
+          "country": "UK",
+          "enabled": true,
+          "priority": 18,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "reuters-tech",
+          "name": "Reuters Technology",
+          "url": "https://feeds.reuters.com/reuters/technologyNews",
+          "language": "en",
+          "country": "UK",
+          "enabled": true,
+          "priority": 19,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "ap-news",
+          "name": "AP News",
+          "url": "https://feedx.net/rss/ap.xml",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 20,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "ap-world",
+          "name": "AP World News",
+          "url": "https://feeds.apnews.com/apf-worldnews",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 21,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "ap-tech",
+          "name": "AP Technology",
+          "url": "https://feeds.apnews.com/apf-technology",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 22,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "bloomberg",
+          "name": "Bloomberg",
+          "url": "https://www.bloomberg.com/feed/podcast/etf.xml",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 23,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "bloomberg-tech",
+          "name": "Bloomberg Technology",
+          "url": "https://www.bloomberg.com/technology",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 24,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "wsj",
+          "name": "Wall Street Journal",
+          "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 25,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "ft",
+          "name": "Financial Times",
+          "url": "https://www.ft.com/?format=rss",
+          "language": "en",
+          "country": "UK",
+          "enabled": true,
+          "priority": 26,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "economist",
+          "name": "The Economist",
+          "url": "https://www.economist.com/the-world-this-week/rss.xml",
+          "language": "en",
+          "country": "UK",
+          "enabled": true,
+          "priority": 27,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "time",
+          "name": "TIME",
+          "url": "http://feeds.time.com/time/topstories",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 28,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "newsweek",
+          "name": "Newsweek",
+          "url": "https://www.newsweek.com/rss",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 29,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "usatoday",
+          "name": "USA Today",
+          "url": "https://rss.usatoday.com/usatoday-news",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 30,
+          "verified": true,
+          "statusCode": 200
+        }
+      ]
+    },
+    "news-china": {
+      "name": "中国新闻媒体",
+      "nameEn": "China News",
+      "priority": 2,
+      "sources": [
+        {
+          "id": "xinhua",
+          "name": "新华网",
+          "url": "http://www.xinhuanet.com/politics/2015lh/xwzx_201551.xml",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 1,
+          "verified": false
+        },
+        {
+          "id": "people-daily",
+          "name": "人民网",
+          "url": "http://politics.people.com.cn/rss/1024.xml",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 2,
+          "verified": false
+        },
+        {
+          "id": "cctv",
+          "name": "央视网",
+          "url": "https://news.cctv.com/rss/",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 3,
+          "verified": false
+        },
+        {
+          "id": "chinadaily",
+          "name": "中国日报",
+          "url": "https://www.chinadaily.com.cn/rss/china.xml",
+          "language": "en",
+          "country": "CN",
+          "enabled": true,
+          "priority": 4,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "huanqiu",
+          "name": "环球网",
+          "url": "https://www.huanqiu.com/rss",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 5,
+          "verified": false
+        },
+        {
+          "id": "thepaper",
+          "name": "澎湃新闻",
+          "url": "https://cache.thepaper.cn/contentapi/wwwIndexRight",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 6,
+          "verified": false
+        },
+        {
+          "id": "caixin",
+          "name": "财新网",
+          "url": "https://www.caixin.com/rss/",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 7,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "163-news",
+          "name": "网易新闻",
+          "url": "https://www.163.com/rss/",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 8,
+          "verified": false
+        },
+        {
+          "id": "sina-news",
+          "name": "新浪新闻",
+          "url": "https://feed.sina.com.cn/news/roll.xml",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 9,
+          "verified": false
+        },
+        {
+          "id": "sohu-news",
+          "name": "搜狐新闻",
+          "url": "https://roll.sohu.com/feed.xml",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 10,
+          "verified": false
+        },
+        {
+          "id": "ifeng",
+          "name": "凤凰网",
+          "url": "https://rss.ifeng.com/rss.php",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 11,
+          "verified": false
+        },
+        {
+          "id": "ithome",
+          "name": "IT 之家",
+          "url": "https://www.ithome.com/rss/",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 12,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "36kr",
+          "name": "36 氪",
+          "url": "https://36kr.com/feed",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 13,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "huxiu",
+          "name": "虎嗅",
+          "url": "https://www.huxiu.com/article/rss.xml",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 14,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "tmtpost",
+          "name": "钛媒体",
+          "url": "https://www.tmtpost.com/feed",
+          "language": "zh",
+          "country": "CN",
+          "enabled": true,
+          "priority": 15,
+          "verified": true,
+          "statusCode": 200
+        }
+      ]
+    },
+    "news-tech": {
+      "name": "科技媒体",
+      "nameEn": "Tech News",
+      "priority": 3,
+      "sources": [
+        {
+          "id": "techcrunch",
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/feed/",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 1,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "theverge",
+          "name": "The Verge",
+          "url": "https://www.theverge.com/rss/index.xml",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 2,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "wired",
+          "name": "Wired",
+          "url": "https://www.wired.com/feed/rss",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 3,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "arstechnica",
+          "name": "Ars Technica",
+          "url": "https://feeds.arstechnica.com/arstechnica/index",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 4,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "engadget",
+          "name": "Engadget",
+          "url": "https://www.engadget.com/rss.xml",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 5,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "gizmodo",
+          "name": "Gizmodo",
+          "url": "https://gizmodo.com/rss",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 6,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "mashable",
+          "name": "Mashable",
+          "url": "https://mashable.com/feeds/rss/all",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 7,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "zdnet",
+          "name": "ZDNet",
+          "url": "https://www.zdnet.com/topic/tech-industry/rss.xml",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 8,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "cnet",
+          "name": "CNET",
+          "url": "https://www.cnet.com/rss/news/",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 9,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "venturebeat",
+          "name": "VentureBeat",
+          "url": "https://venturebeat.com/feed/",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 10,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "mit-tech-review",
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/feed/",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 11,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "thenextweb",
+          "name": "The Next Web",
+          "url": "https://thenextweb.com/feed/",
+          "language": "en",
+          "country": "NL",
+          "enabled": true,
+          "priority": 12,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "recode",
+          "name": "Recode",
+          "url": "https://www.vox.com/recode/index.xml",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 13,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "fastcompany",
+          "name": "Fast Company",
+          "url": "https://www.fastcompany.com/rss",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 14,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "businessinsider",
+          "name": "Business Insider",
+          "url": "https://www.businessinsider.com/rss",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 15,
+          "verified": true,
+          "statusCode": 200
+        }
+      ]
+    },
+    "news-finance": {
+      "name": "财经新闻",
+      "nameEn": "Finance News",
+      "priority": 4,
+      "sources": [
+        {
+          "id": "bloomberg-markets",
+          "name": "Bloomberg Markets",
+          "url": "https://www.bloomberg.com/markets",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 1,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "cnbc",
+          "name": "CNBC",
+          "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 2,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "marketwatch",
+          "name": "MarketWatch",
+          "url": "https://feeds.marketwatch.com/marketwatch/topstories/",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 3,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "forbes",
+          "name": "Forbes",
+          "url": "https://www.forbes.com/real-time/feed2/",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 4,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "fortune",
+          "name": "Fortune",
+          "url": "http://fortune.com/feed/",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 5,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "barrons",
+          "name": "Barron's",
+          "url": "https://feeds.dowjones.com/rss/barrons",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 6,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "investopedia",
+          "name": "Investopedia",
+          "url": "https://www.investopedia.com/rss",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 7,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "seekingalpha",
+          "name": "Seeking Alpha",
+          "url": "https://seekingalpha.com/feed.xml",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 8,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "motleyfool",
+          "name": "The Motley Fool",
+          "url": "https://www.fool.com/feeds/all-articles/",
+          "language": "en",
+          "country": "US",
+          "enabled": true,
+          "priority": 9,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "investing",
+          "name": "Investing.com",
+          "url": "https://cn.investing.com/rss/",
+          "language": "en",
+          "country": "IL",
+          "enabled": true,
+          "priority": 10,
+          "verified": true,
+          "statusCode": 200
+        }
+      ]
+    },
+    "news-asia": {
+      "name": "亚洲新闻",
+      "nameEn": "Asia News",
+      "priority": 5,
+      "sources": [
+        {
+          "id": "straitstimes",
+          "name": "The Straits Times",
+          "url": "https://www.straitstimes.com/RSS-Feeds",
+          "language": "en",
+          "country": "SG",
+          "enabled": true,
+          "priority": 1,
+          "verified": false
+        },
+        {
+          "id": "japantimes",
+          "name": "The Japan Times",
+          "url": "https://www.japantimes.co.jp/feed/",
+          "language": "en",
+          "country": "JP",
+          "enabled": true,
+          "priority": 2,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "koreatimes",
+          "name": "The Korea Times",
+          "url": "https://www.koreatimes.co.kr/rss/rss_pop.html",
+          "language": "en",
+          "country": "KR",
+          "enabled": true,
+          "priority": 3,
+          "verified": false
+        },
+        {
+          "id": "scmp",
+          "name": "South China Morning Post",
+          "url": "https://www.scmp.com/rss/318224/feed",
+          "language": "en",
+          "country": "HK",
+          "enabled": true,
+          "priority": 4,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "nhk",
+          "name": "NHK World",
+          "url": "https://www3.nhk.or.jp/nhkworld/en/news/rss/",
+          "language": "en",
+          "country": "JP",
+          "enabled": true,
+          "priority": 5,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "timesofindia",
+          "name": "The Times of India",
+          "url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
+          "language": "en",
+          "country": "IN",
+          "enabled": true,
+          "priority": 6,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "hindu",
+          "name": "The Hindu",
+          "url": "https://www.thehindu.com/news/national/feeder/default.rss",
+          "language": "en",
+          "country": "IN",
+          "enabled": true,
+          "priority": 7,
+          "verified": true,
+          "statusCode": 200
+        }
+      ]
+    },
+    "news-europe": {
+      "name": "欧洲新闻",
+      "nameEn": "Europe News",
+      "priority": 6,
+      "sources": [
+        {
+          "id": "dw",
+          "name": "Deutsche Welle",
+          "url": "https://rss.dw.com/xml/rss-en-all",
+          "language": "en",
+          "country": "DE",
+          "enabled": true,
+          "priority": 1,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "france24",
+          "name": "France 24",
+          "url": "https://www.france24.com/en/rss",
+          "language": "en",
+          "country": "FR",
+          "enabled": true,
+          "priority": 2,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "euronews",
+          "name": "Euronews",
+          "url": "https://www.euronews.com/rss",
+          "language": "en",
+          "country": "FR",
+          "enabled": true,
+          "priority": 3,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "politico-eu",
+          "name": "Politico Europe",
+          "url": "https://www.politico.eu/feed/",
+          "language": "en",
+          "country": "BE",
+          "enabled": true,
+          "priority": 4,
+          "verified": true,
+          "statusCode": 200
+        },
+        {
+          "id": "spiegel",
+          "name": "Der Spiegel",
+          "url": "https://www.spiegel.de/schlagzeilen/index.rss",
+          "language": "de",
+          "country": "DE",
+          "enabled": false,
+          "priority": 5,
+          "verified": false
+        },
+        {
+          "id": "lemonde",
+          "name": "Le Monde",
+          "url": "https://www.lemonde.fr/rss/une.xml",
+          "language": "fr",
+          "country": "FR",
+          "enabled": false,
+          "priority": 6,
+          "verified": false
+        }
+      ]
+    }
+  }
+}

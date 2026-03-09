@@ -1,0 +1,21 @@
+{
+  "name": "daily-briefing",
+  "description": "小黄鸡每日简报定时任务",
+  "schedule": "0 9 * * *",
+  "timezone": "Asia/Shanghai",
+  "enabled": true,
+  "command": "node src/index.js",
+  "workingDir": "/Users/xiaohuangjiai/.openclaw/workspace-somi/skills/xhj-daily-briefing",
+  "agent": "somi",
+  "retry": {
+    "enabled": true,
+    "maxAttempts": 3,
+    "delay": 300
+  },
+  "timeout": 300,
+  "log": {
+    "enabled": true,
+    "level": "info",
+    "path": "/Users/xiaohuangjiai/.openclaw/workspace-somi/skills/xhj-daily-briefing/logs"
+  }
+}

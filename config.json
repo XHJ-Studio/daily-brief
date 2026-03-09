@@ -1,0 +1,59 @@
+{
+  "name": "小黄鸡每日简报",
+  "shortName": "XDB",
+  "fullName": "Xiaohuangji Daily Briefing",
+  "version": "1.0.0",
+  "author": "小黄鸡工坊",
+  "description": "类似总统每日简报 (PDB) 的个性化新闻推送服务",
+  "descriptionEn": "Personalized news briefing service like President's Daily Brief (PDB)",
+  "enabled": true,
+  "category": "news",
+  "tags": [
+    "新闻",
+    "简报",
+    "RSS",
+    "定时",
+    "news",
+    "briefing",
+    "daily"
+  ],
+  "schedule": {
+    "enabled": true,
+    "time": "09:00",
+    "timezone": "Asia/Shanghai",
+    "skipWeekends": false,
+    "cronExpression": "0 9 * * *"
+  },
+  "output": {
+    "channel": "discord",
+    "accountId": "somi",
+    "format": "markdown",
+    "maxNewsCount": 15,
+    "includeImages": true,
+    "includeLinks": true
+  },
+  "summary": {
+    "enabled": true,
+    "model": "bailian/qwen3.5-plus",
+    "maxLength": 300,
+    "language": "zh-CN",
+    "style": "concise"
+  },
+  "filter": {
+    "minQuality": 0.6,
+    "deduplicate": true,
+    "excludeKeywords": ["八卦", "娱乐", "明星"],
+    "priorityKeywords": ["科技", "财经", "AI", "创业"]
+  },
+  "sources": {
+    "checkInterval": 3600,
+    "maxAge": 86400,
+    "retryAttempts": 3,
+    "timeout": 10000
+  },
+  "limits": {
+    "dailyBriefings": 1,
+    "breakingNewsPerDay": 5,
+    "maxSources": 50
+  }
+}
