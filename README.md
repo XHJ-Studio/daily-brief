@@ -1,296 +1,470 @@
-# 📰 Daily Brief (小黄鸡每日简报)
+# 📰 Daily Brief
 
-> 🤖 AI 驱动的个性化新闻简报生成器，类似总统每日简报 (PDB)
+> **AI-Driven Personalized News Briefing Generator**
+> 
+> Your personal President's Daily Brief (PDB) — aggregating 145+ global RSS feeds, powered by AI, delivered every morning.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-blue)](https://openclaw.ai)
-[![RSS Feeds](https://img.shields.io/badge/RSS%20Feeds-145+-green)](./sources.json)
+[![RSS Feeds](https://img.shields.io/badge/RSS%20Feeds-145+-green.svg)](./sources.json)
+[![News Sources](https://img.shields.io/badge/News%20Sources-65+-orange.svg)](./sources.json)
+[![Verified](https://img.shields.io/badge/Verified-70+-brightgreen.svg)](./sources.json)
+[![Stars](https://img.shields.io/github/stars/XHJ-Studio/daily-brief.svg)](https://github.com/XHJ-Studio/daily-brief)
 
 ---
 
-## 🚀 功能特性
+## 🌟 Why Daily Brief?
 
-- 📡 **145+ RSS 源** - 覆盖全球 65+ 家主流媒体
-- 🌍 **全球覆盖** - 美/中/欧/亚四大地区
-- 🤖 **AI 摘要** - 自动生成新闻摘要
-- ⏰ **定时推送** - 每天 09:00 自动推送
-- 🎯 **智能过滤** - 基于兴趣关键词过滤
-- 📊 **质量评分** - 自动评估新闻质量
-- 🔄 **自动去重** - 避免重复新闻
-- 📱 **多平台** - 支持 Discord/Telegram/微信
+In an age of information overload, **Daily Brief** cuts through the noise:
 
----
+- 📡 **145+ Premium RSS Feeds** - Curated from 65+ top-tier global media outlets
+- 🤖 **AI-Powered Summaries** - Get the essence of each story in seconds
+- ⏰ **Scheduled Delivery** - Your briefing arrives every morning at 9 AM
+- 🎯 **Smart Filtering** - Only news that matters to *you*
+- 🌍 **Global Coverage** - US, China, Europe, Asia — all in one place
+- 📊 **Quality Scoring** - AI evaluates news credibility and relevance
+- 🔄 **Auto-Deduplication** - No duplicate stories across sources
+- 📱 **Multi-Platform** - Discord, Telegram, WeChat support
 
-## 📁 文件结构
-
-```
-daily-brief/
-├── SKILL.md              # 技能说明
-├── README.md             # 使用指南
-├── config.json           # 主配置
-├── sources.json          # RSS 源列表 (145+)
-├── interests.json        # 用户兴趣配置
-├── cron.json            # 定时任务配置
-├── package.json         # 依赖配置
-├── src/
-│   ├── index.js         # 主入口
-│   ├── fetch.js         # RSS 抓取
-│   ├── filter.js        # 内容过滤
-│   ├── summarize.js     # 摘要生成
-│   └── send.js          # 推送发送
-└── templates/
-    └── briefing.md      # 简报模板
-```
+> "Like having a team of analysts working for you 24/7."
 
 ---
 
-## 🌐 收录媒体
+## 📋 Table of Contents
 
-### 全球综合新闻 (30 家)
-- BBC, CNN, NYTimes, Reuters, AP, Bloomberg, WSJ, FT, The Economist...
-
-### 中国新闻媒体 (15 家)
-- 财新网，36 氪，IT 之家，虎嗅，钛媒体，澎湃新闻...
-
-### 科技媒体 (15 家)
-- TechCrunch, The Verge, Wired, Ars Technica, Engadget...
-
-### 财经新闻 (10 家)
-- Bloomberg, CNBC, MarketWatch, Forbes, Fortune...
-
-### 亚洲新闻 (7 家)
-- Japan Times, NHK, SCMP, Times of India...
-
-### 欧洲新闻 (6 家)
-- Deutsche Welle, France 24, Euronews, Politico EU...
-
-**完整列表**: [sources.json](./sources.json)
+- [Features](#-features)
+- [Media Sources](#-media-sources)
+- [Quick Start](#-quick-start)
+- [Configuration](#-configuration)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Statistics](#-statistics)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
-## ⚙️ 安装
+## ✨ Features
 
-### 1. 克隆仓库
+### 📡 Massive RSS Network
+- **145+ RSS feeds** from verified sources
+- **65+ media outlets** across 10 categories
+- **84% success rate** with auto-failover
+- **Real-time health checks** every hour
+
+### 🤖 AI Intelligence
+- **Smart Summarization** - Extract key points automatically
+- **Quality Scoring** - Rate news by credibility (0-1 scale)
+- **Interest Matching** - Filter by your keywords
+- **Auto-Categorization** - Organize by topic
+
+### ⏰ Automation
+- **Cron Scheduler** - Daily delivery at 9:00 AM
+- **Timezone Support** - Works in any timezone
+- **Retry Logic** - 3 attempts for failed fetches
+- **Health Monitoring** - Auto-detect offline sources
+
+### 📊 Analytics
+- **News Statistics** - Track sources, categories, trends
+- **Delivery Reports** - Know what was sent when
+- **Source Status** - Real-time availability checks
+
+---
+
+## 🌐 Media Sources
+
+### Global News (30 outlets)
+**Tier 1 Media:**
+- 🇺🇸 **CNN** (Top/World/Tech/Business)
+- 🇺🇸 **New York Times** (Home/World/Tech/Business)
+- 🇺🇸 **Washington Post**
+- 🇺🇸 **AP News** (World/Technology)
+- 🇺🇸 **Bloomberg** (Markets/Technology)
+- 🇺🇸 **Wall Street Journal**
+- 🇬🇧 **BBC** (World/Home/Tech/Business)
+- 🇬🇧 **Reuters** (World/Business/Tech)
+- 🇬🇧 **The Guardian** (World/UK/Tech)
+- 🇬🇧 **Financial Times**
+- 🇬🇧 **The Economist**
+
+**More:** TIME, Newsweek, USA Today, CNBC, MarketWatch, Forbes, Fortune, Politico...
+
+### China News (15 outlets)
+- 财新网 ✅
+- 36 氪 ✅
+- IT 之家 ✅
+- 虎嗅 ✅
+- 钛媒体 ✅
+- 澎湃新闻
+- 中国日报
+
+### Technology (15 outlets)
+- TechCrunch ✅
+- The Verge ✅
+- Wired ✅
+- Ars Technica ✅
+- Engadget ✅
+- MIT Technology Review ✅
+- ZDNet, CNET, VentureBeat...
+
+### Finance (10 outlets)
+- Bloomberg Markets ✅
+- CNBC ✅
+- MarketWatch ✅
+- Forbes ✅
+- Wall Street Journal ✅
+
+### Regional News
+- **Asia (7)**: Japan Times, NHK, SCMP, Times of India...
+- **Europe (6)**: Deutsche Welle, France 24, Euronews...
+
+👉 **Full list**: [`sources.json`](./sources.json)
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js >= 16.0.0
+- npm or yarn
+- OpenClaw (for integration)
+
+### Installation
+
 ```bash
-git clone https://github.com/xhjgfstudio/daily-brief.git
+# Clone the repository
+git clone https://github.com/XHJ-Studio/daily-brief.git
 cd daily-brief
-```
 
-### 2. 安装依赖
-```bash
+# Install dependencies
 npm install
-```
 
-### 3. 配置兴趣
-编辑 `interests.json`:
-```json
-{
-  "keywords": ["人工智能", "创业", "投资", "AI"],
-  "excludeKeywords": ["娱乐", "八卦"],
-  "mustInclude": ["OpenAI", "Google"]
-}
-```
+# Configure your interests
+cp interests.json.example interests.json
+# Edit interests.json with your keywords
 
-### 4. 设置定时任务
-```bash
-# OpenClaw cron
-openclaw cron add --config cron.json
-
-# 或系统 crontab
-crontab -e
-# 添加：0 9 * * * cd /path/to/daily-brief && node src/index.js
-```
-
-### 5. 测试运行
-```bash
+# Test run
 npm start
 ```
 
+### Setup Scheduled Delivery
+
+#### Option 1: OpenClaw Cron (Recommended)
+```bash
+openclaw cron add --config cron.json
+```
+
+#### Option 2: System Cron
+```bash
+crontab -e
+# Add this line (daily at 9 AM):
+0 9 * * * cd /path/to/daily-brief && node src/index.js
+```
+
+#### Option 3: Node.js Scheduler
+```javascript
+const cron = require('node-cron');
+const briefing = require('./src/index');
+
+cron.schedule('0 9 * * *', () => {
+  briefing.main();
+});
+```
+
 ---
 
-## 📋 配置说明
+## ⚙️ Configuration
 
 ### config.json
 ```json
 {
   "schedule": {
     "time": "09:00",
-    "timezone": "Asia/Shanghai"
+    "timezone": "Asia/Shanghai",
+    "skipWeekends": false
   },
   "output": {
     "channel": "discord",
+    "accountId": "somi",
+    "format": "markdown",
     "maxNewsCount": 15
   },
   "summary": {
+    "enabled": true,
+    "model": "bailian/qwen3.5-plus",
     "maxLength": 300,
     "language": "zh-CN"
+  },
+  "filter": {
+    "minQuality": 0.6,
+    "deduplicate": true,
+    "excludeKeywords": ["gossip", "celebrity"],
+    "priorityKeywords": ["AI", "tech", "startup"]
+  }
+}
+```
+
+### interests.json
+```json
+{
+  "keywords": [
+    "artificial intelligence",
+    "machine learning",
+    "startup",
+    "investment",
+    "technology"
+  ],
+  "excludeKeywords": [
+    "entertainment",
+    "gossip",
+    "celebrity"
+  ],
+  "mustInclude": [
+    "OpenAI",
+    "Google",
+    "Apple",
+    "Microsoft"
+  ],
+  "categories": {
+    "enabled": ["tech", "finance", "ai"],
+    "disabled": ["sports", "entertainment"]
   }
 }
 ```
 
 ### sources.json
-- 145+ RSS 源
-- 10 个分类
-- 已验证状态
-- 优先级排序
-
-### interests.json
-- 兴趣关键词
-- 排除关键词
-- 必须包含关键词
-- 订阅源管理
+Manage 145+ RSS feeds with:
+- Source URL
+- Language & Country
+- Priority (1-99)
+- Enabled/Disabled status
+- Verification status
 
 ---
 
-## 📊 简报示例
+## 📖 Usage
 
-```markdown
-# 📰 小黄鸡每日简报
-**日期**: 2026-03-09 周一
-**第 001 期**
+### Command Line
 
----
-
-## 🔥 头条新闻
-1. **[科技] OpenAI 发布 GPT-5** - 新模型在...
-2. **[财经] 纳斯达克创新高** - 科技股领涨...
-
----
-
-## 📱 科技前沿
-- **AI 新突破**: 研究人员发现...
-
----
-
-## 🌍 国际动态
-- **政策变化**: 欧盟通过...
-
----
-
-*🤖 由 XDB 自动生成*
-```
-
----
-
-## 🛠️ 使用
-
-### 命令行
 ```bash
-# 生成简报
+# Generate daily briefing
 npm start
 
-# 检查 RSS 源
+# Check RSS source health
 npm run check-sources
 
-# 测试过滤
+# Test filtering
 node src/filter.js
+
+# View statistics
+node src/index.js --stats
 ```
 
-### API 调用
+### Programmatic Usage
+
 ```javascript
 const briefing = require('./src/index');
+
+// Generate and send briefing
 await briefing.main();
+
+// Fetch RSS feeds
+const fetch = require('./src/fetch');
+const articles = await fetch.fetchRSS('https://example.com/rss');
+
+// Filter articles
+const filter = require('./src/filter');
+const filtered = filter.filterArticles(articles, interests);
+
+// Generate summary
+const summarize = require('./src/summarize');
+const summary = summarize.generateSummary(content, 200);
+```
+
+### Example Output
+
+```markdown
+# 📰 Daily Brief
+**Date**: 2026-03-09 Monday
+**Issue**: #001
+
+---
+
+## 🔥 Top Stories
+1. **[Tech] OpenAI Releases GPT-5** - New model achieves...
+   [Read more](https://...)
+
+2. **[Finance] Nasdaq Hits Record High** - Tech stocks lead...
+   [Read more](https://...)
+
+---
+
+## 📱 Technology
+- **AI Breakthrough**: Researchers discover...
+  [Link](https://...)
+
+---
+
+## 🌍 World News
+- **Policy Change**: EU passes...
+  [Link](https://...)
+
+---
+
+*🤖 Generated by Daily Brief v1.2.0*
 ```
 
 ---
 
-## 📈 统计
+## 📁 Project Structure
 
-| 指标 | 数值 |
-|------|------|
-| RSS 源总数 | 145+ |
-| 新闻媒体 | 65+ 家 |
-| 已验证可用 | 70+ |
-| 覆盖地区 | 美/中/欧/亚 |
-| 成功率 | 84% |
+```
+daily-brief/
+├── 📄 README.md              # This file
+├── 📄 SKILL.md               # OpenClaw skill documentation
+├── 📄 LICENSE                # MIT License
+├── 📄 .gitignore            # Git ignore rules
+├── 📄 config.json           # Main configuration
+├── 📄 sources.json          # RSS feeds database (145+)
+├── 📄 interests.json        # User interests (gitignored)
+├── 📄 cron.json            # Cron job configuration
+├── 📄 package.json         # Node.js dependencies
+├── 📁 src/
+│   ├── index.js            # Main entry point
+│   ├── fetch.js            # RSS feed fetching
+│   ├── filter.js           # Content filtering & scoring
+│   ├── summarize.js        # AI summarization
+│   └── send.js             # Multi-platform delivery
+└── 📁 templates/
+    └── briefing.md         # Briefing template
+```
 
 ---
 
-## 🔄 维护
+## 📊 Statistics
 
-### 定期检查
+| Metric | Count | Status |
+|--------|-------|--------|
+| **Total RSS Feeds** | 145+ | ✅ Active |
+| **News Outlets** | 65+ | ✅ Verified |
+| **Sources Verified** | 70+ | ✅ 84% Success |
+| **Categories** | 10 | ✅ Configured |
+| **Languages** | 5+ | ✅ Multi-lang |
+| **Regions** | 4 | ✅ Global |
+
+### Source Distribution
+
+```
+Global News:      ████████████████████ 30 sources (30%)
+Technology:       ██████████ 15 sources (15%)
+China News:       ██████████ 15 sources (15%)
+Finance:          ███████ 10 sources (10%)
+Asia News:        █████ 7 sources (7%)
+Europe News:      ████ 6 sources (6%)
+AI & ML:          █████████ 13 sources (13%)
+Communities:      ███████ 10 sources (10%)
+Others:           ████████ 9 sources (9%)
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how you can help:
+
+### Ways to Contribute
+1. **Add RSS Sources** - Found a great news source? Add it to `sources.json`
+2. **Improve Filters** - Better keyword matching or quality scoring
+3. **New Features** - Multi-language support, custom templates
+4. **Bug Reports** - Found an issue? Open an issue!
+5. **Documentation** - Help improve docs and examples
+
+### Development Workflow
+
 ```bash
-# 每周检查 RSS 源可用性
-npm run check-sources
+# Fork the repository
+git clone https://github.com/YOUR_USERNAME/daily-brief.git
+
+# Create a feature branch
+git checkout -b feature/amazing-feature
+
+# Make your changes
+# ...
+
+# Commit and push
+git commit -m "Add amazing feature"
+git push origin feature/amazing-feature
+
+# Open a Pull Request
 ```
 
-### 添加新源
-编辑 `sources.json`:
-```json
-{
-  "id": "new-source",
-  "name": "媒体名称",
-  "url": "https://example.com/rss",
-  "language": "en",
-  "enabled": true,
-  "priority": 1
-}
-```
+### Code Style
+- Use ESLint: `npm run lint`
+- Follow existing patterns
+- Add comments for complex logic
+- Write tests for new features
 
 ---
 
-## ⚠️ 注意事项
-
-1. **RSS 源稳定性**: 部分源可能失效，定期检查
-2. **推送频率**: 每天最多 1 次完整简报
-3. **内容过滤**: 自动过滤低质量内容
-4. **隐私保护**: 不存储用户阅读历史
-5. **版权**: 仅用于个人学习
-
----
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request!
-
-1. Fork 仓库
-2. 创建分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
-
----
-
-## 📝 更新日志
+## 📝 Changelog
 
 ### v1.2.0 (2026-03-09)
-- ✅ 添加 65+ 家新闻媒体
-- ✅ 覆盖全球主要地区
-- ✅ 70 家已验证可用
-- ✅ 智能内容过滤
-- ✅ 定时推送任务
+**🎉 Major Release**
+- ✅ Added 65+ news media outlets
+- ✅ Global coverage (US/China/Europe/Asia)
+- ✅ 70+ sources verified (84% success rate)
+- ✅ Smart content filtering
+- ✅ Scheduled daily delivery
+- ✅ Multi-platform support
 
 ### v1.1.0 (2026-03-09)
-- ✅ 收集 72 个技术类 RSS 源
-- ✅ 100% 可用性验证
-- ✅ 10 个分类
+- ✅ Collected 72 tech-focused RSS feeds
+- ✅ 100% verification rate
+- ✅ 10 categories organized
 
 ### v1.0.0 (2026-03-09)
-- ✅ 初始版本发布
-- ✅ 基础功能实现
+- ✅ Initial release
+- ✅ Core functionality implemented
 
 ---
 
-## 📄 许可证
+## 📄 License
 
-MIT License - 详见 [LICENSE](./LICENSE)
+This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
 
----
-
-## 🙏 致谢
-
-- [RSSHub](https://github.com/DIYgod/RSSHub) - 万物皆可 RSS
-- [awesome-rsshub-routes](https://github.com/JackyST0/awesome-rsshub-routes) - RSSHub 路由集合
-- [OpenClaw](https://openclaw.ai) - AI 助手框架
+**TL;DR**: Do whatever you want with this code, just don't sue us.
 
 ---
 
-## 📞 联系方式
+## 🙏 Acknowledgments
 
-- **作者**: 小黄鸡工坊 (xhjgfstudio)
+- **[RSSHub](https://github.com/DIYgod/RSSHub)** - Everything is RSSible
+- **[awesome-rsshub-routes](https://github.com/JackyST0/awesome-rsshub-routes)** - RSSHub routes collection
+- **[OpenClaw](https://openclaw.ai)** - AI assistant framework
+- **[rss-parser](https://github.com/rbren/rss-parser)** - RSS parsing library
+
+---
+
+## 📞 Contact
+
+- **Author**: 小黄鸡工坊 (xhjgfstudio)
 - **Email**: xhjgfstudio@gmail.com
+- **GitHub**: [@XHJ-Studio](https://github.com/XHJ-Studio)
 - **Discord**: 小黄鸡工坊#3232
 
 ---
 
-*Made with ❤️ by 小黄鸡工坊*
+## 🌟 Show Your Support
+
+If Daily Brief helps you stay informed, please:
+
+1. ⭐ **Star this repository** on GitHub
+2. 📢 **Share** with friends and colleagues
+3. 🐛 **Report bugs** and suggest features
+4. 💝 **Contribute** code or documentation
+
+---
+
+> **"Stay informed, stay ahead."** 📰
+
+*Made with ❤️ by 小黄鸡工坊 | Powered by OpenClaw*
