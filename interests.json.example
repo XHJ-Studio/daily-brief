@@ -1,0 +1,88 @@
+{
+  "version": "0.0.2",
+  "user": {
+    "id": "somi",
+    "timezone": "Asia/Shanghai",
+    "language": "zh-CN"
+  },
+  "interests": {
+    "keywords": [
+      "人工智能",
+      "机器学习",
+      "深度学习",
+      "AI",
+      "OpenAI",
+      "Google",
+      "科技",
+      "创业",
+      "投资",
+      "财经",
+      "加密货币",
+      "区块链",
+      "互联网",
+      "软件",
+      "编程",
+      "GitHub",
+      "开源"
+    ],
+    "excludeKeywords": [
+      "娱乐",
+      "八卦",
+      "明星",
+      "绯闻",
+      "体育",
+      "足球",
+      "篮球"
+    ],
+    "mustInclude": [
+      "OpenAI",
+      "Google",
+      "Apple",
+      "Microsoft",
+      "Tesla",
+      "英伟达",
+      "AMD"
+    ],
+    "categories": {
+      "enabled": [
+        "tech",
+        "finance",
+        "ai",
+        "news-global",
+        "news-china"
+      ],
+      "disabled": [
+        "sports",
+        "entertainment"
+      ]
+    }
+  },
+  "preferences": {
+    "briefingTime": "09:00",
+    "maxNewsCount": 15,
+    "minNewsCount": 5,
+    "includeSummary": true,
+    "includeLinks": true,
+    "includeImages": false,
+    "weekendDigest": true,
+    "breakingNews": true,
+    "digestFrequency": "weekly"
+  },
+  "sources": {
+    "subscribed": [
+      "hackernews",
+      "techcrunch",
+      "theverge",
+      "36kr",
+      "sspai",
+      "bbc-world",
+      "cnn-top",
+      "ap-news",
+      "reuters-world",
+      "hstreetcn",
+      "caixin",
+      "ithome"
+    ],
+    "blocked": []
+  }
+}

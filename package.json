@@ -1,24 +1,36 @@
 {
-  "name": "xhj-daily-briefing",
-  "version": "1.0.0",
-  "description": "小黄鸡每日简报 - Xiaohuangji Daily Briefing",
+  "name": "daily-brief",
+  "version": "0.0.2",
+  "description": "小黄鸡每日简报 - AI-driven personalized news briefing generator with 145+ RSS feeds",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "node src/index.js",
+    "test": "node src/index.js --test",
     "lint": "eslint src/",
-    "check-sources": "node scripts/check_sources.js"
+    "check-sources": "node scripts/check_sources.js",
+    "publish": "clawhub publish"
   },
   "keywords": [
     "rss",
     "news",
     "briefing",
-    "daily",
+    "ai",
     "openclaw",
-    "skill"
+    "automation",
+    "daily-news",
+    "media-monitoring",
+    "slash-command"
   ],
-  "author": "小黄鸡工坊",
+  "author": "小黄鸡工坊 (xhjgfstudio)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XHJ-Studio/daily-brief.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XHJ-Studio/daily-brief/issues"
+  },
+  "homepage": "https://github.com/XHJ-Studio/daily-brief#readme",
   "dependencies": {
     "rss-parser": "^3.13.0",
     "axios": "^1.6.0"
@@ -31,13 +43,46 @@
   },
   "openclaw": {
     "skill": {
-      "id": "xhj-daily-briefing",
+      "id": "daily-brief",
       "name": "小黄鸡每日简报",
-      "shortName": "XDB",
-      "version": "1.0.0",
+      "nameEn": "Daily Brief",
+      "version": "0.0.2",
       "category": "news",
-      "autoTrigger": false,
-      "scheduled": true
+      "autoTrigger": true,
+      "scheduled": true,
+      "slashCommands": true,
+      "minVersion": "2026.3.0"
+    }
+  },
+  "clawhub": {
+    "name": "daily-brief",
+    "displayName": "小黄鸡每日简报",
+    "version": "0.0.2",
+    "description": "AI 驱动的个性化新闻简报生成器，聚合 145+ 全球 RSS 源",
+    "descriptionEn": "AI-driven personalized news briefing with 145+ global RSS feeds",
+    "author": "小黄鸡工坊",
+    "authorEn": "xhjgfstudio",
+    "license": "MIT",
+    "category": "news",
+    "tags": [
+      "新闻",
+      "RSS",
+      "简报",
+      "AI",
+      "自动化",
+      "news",
+      "briefing"
+    ],
+    "repository": "https://github.com/XHJ-Studio/daily-brief",
+    "homepage": "https://github.com/XHJ-Studio/daily-brief#readme",
+    "icon": "assets/icon.png",
+    "screenshots": [
+      "assets/screenshot1.png",
+      "assets/screenshot2.png"
+    ],
+    "publish": {
+      "enabled": true,
+      "visibility": "public"
     }
   }
 }

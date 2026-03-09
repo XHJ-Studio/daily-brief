@@ -4,6 +4,7 @@
 > 
 > Your personal President's Daily Brief (PDB) — aggregating 145+ global RSS feeds, powered by AI, delivered every morning.
 
+[![Version](https://img.shields.io/github/v/tag/XHJ-Studio/daily-brief?label=version&color=blue)](https://github.com/XHJ-Studio/daily-brief/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-blue)](https://openclaw.ai)
 [![RSS Feeds](https://img.shields.io/badge/RSS%20Feeds-145+-green.svg)](./sources.json)
@@ -33,6 +34,7 @@ In an age of information overload, **Daily Brief** cuts through the noise:
 ## 📋 Table of Contents
 
 - [Features](#-features)
+- [Slash Commands](#-slash-commands)
 - [Media Sources](#-media-sources)
 - [Quick Start](#-quick-start)
 - [Configuration](#-configuration)
@@ -64,10 +66,67 @@ In an age of information overload, **Daily Brief** cuts through the noise:
 - **Retry Logic** - 3 attempts for failed fetches
 - **Health Monitoring** - Auto-detect offline sources
 
+### 💬 Slash Commands
+- **`/brief`** - Generate daily briefing instantly
+- **`/brief search <keyword>`** - Search news by topic
+- **`/news`** - Quick view latest news by category
+- **`/search <keyword>`** - Search across all sources
+
 ### 📊 Analytics
 - **News Statistics** - Track sources, categories, trends
 - **Delivery Reports** - Know what was sent when
 - **Source Status** - Real-time availability checks
+
+---
+
+## 💬 Slash Commands
+
+Daily Brief supports powerful slash commands for quick access:
+
+### `/brief` - Generate Briefing
+
+```bash
+/brief                    # Generate today's briefing
+/brief search AI          # Search AI-related news
+/brief sources            # View subscribed sources
+/brief config             # View current configuration
+/brief status             # Check source health status
+```
+
+**Example Output:**
+```markdown
+# 📰 Daily Brief
+**Date**: 2026-03-09 Monday
+**Issue**: #001
+
+## 🔥 Top Stories
+1. **[Tech] OpenAI Releases GPT-5** - New model achieves...
+```
+
+### `/news` - Quick News
+
+```bash
+/news                     # View latest news
+/news tech                # Technology news
+/news finance             # Finance news
+/news global              # International news
+/news china               # China news
+```
+
+### `/search` - Search News
+
+```bash
+/search 人工智能           # Search AI news
+/search Trump             # Search Trump news
+/search crypto            # Search cryptocurrency news
+```
+
+### Auto-Trigger Keywords
+
+Daily Brief also activates automatically when you mention:
+- "新闻"、"简报"、"资讯"、"RSS"
+- "news"、"briefing"、"headline"、"update"
+- "今天有什么新闻"、"看看资讯"
 
 ---
 
@@ -408,23 +467,32 @@ git push origin feature/amazing-feature
 
 ## 📝 Changelog
 
-### v1.2.0 (2026-03-09)
-**🎉 Major Release**
-- ✅ Added 65+ news media outlets
-- ✅ Global coverage (US/China/Europe/Asia)
-- ✅ 70+ sources verified (84% success rate)
-- ✅ Smart content filtering
-- ✅ Scheduled daily delivery
-- ✅ Multi-platform support
+### v0.0.2 (2026-03-09)
+**✨ Features Enhanced**
+- ✅ Added slash command support (`/brief`, `/news`, `/search`)
+- ✅ Optimized SKILL.md for OpenClaw specifications
+- ✅ Added clawhub publishing configuration
+- ✅ Improved auto-trigger keyword matching
+- ✅ Added interests configuration example
+- ✅ Enhanced RSS source health checks
 
-### v1.1.0 (2026-03-09)
-- ✅ Collected 72 tech-focused RSS feeds
-- ✅ 100% verification rate
-- ✅ 10 categories organized
+**🐛 Bug Fixes**
+- ✅ Fixed RSS parsing failures for some sources
+- ✅ Fixed duplicate news issues
+- ✅ Fixed timezone configuration
 
-### v1.0.0 (2026-03-09)
-- ✅ Initial release
+**📝 Documentation**
+- ✅ Updated README to professional version
+- ✅ Added detailed configuration guide
+- ✅ Added usage examples
+
+### v0.0.1 (2026-03-09)
+**🎉 Initial Release**
 - ✅ Core functionality implemented
+- ✅ 145+ RSS feeds integrated
+- ✅ AI summarization
+- ✅ Scheduled delivery
+- ✅ Smart filtering
 
 ---
 

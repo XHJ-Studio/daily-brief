@@ -1,22 +1,102 @@
 {
-  "name": "小黄鸡每日简报",
-  "shortName": "XDB",
-  "fullName": "Xiaohuangji Daily Briefing",
-  "version": "1.0.0",
-  "author": "小黄鸡工坊",
-  "description": "类似总统每日简报 (PDB) 的个性化新闻推送服务",
-  "descriptionEn": "Personalized news briefing service like President's Daily Brief (PDB)",
-  "enabled": true,
-  "category": "news",
-  "tags": [
-    "新闻",
-    "简报",
-    "RSS",
-    "定时",
-    "news",
-    "briefing",
-    "daily"
-  ],
+  "skill": {
+    "id": "daily-brief",
+    "name": "小黄鸡每日简报",
+    "nameEn": "Daily Brief",
+    "version": "0.0.2",
+    "enabled": true,
+    "category": "news",
+    "tags": [
+      "新闻",
+      "RSS",
+      "简报",
+      "AI",
+      "自动化",
+      "news",
+      "briefing",
+      "automation"
+    ],
+    "author": "小黄鸡工坊",
+    "repository": "https://github.com/XHJ-Studio/daily-brief",
+    "license": "MIT",
+    "minOpenClawVersion": "2026.3.0"
+  },
+  "autoTrigger": {
+    "enabled": true,
+    "priority": "high",
+    "keywords": [
+      "新闻",
+      "简报",
+      "资讯",
+      "RSS",
+      "今天有什么新闻",
+      "看看资讯",
+      "news",
+      "briefing",
+      "headline",
+      "update",
+      "daily brief"
+    ],
+    "excludeKeywords": [
+      "天气",
+      "股票",
+      "实时",
+      "娱乐",
+      "八卦"
+    ],
+    "contextWindow": 5,
+    "cooldown": 3600
+  },
+  "slashCommands": {
+    "enabled": true,
+    "commands": [
+      {
+        "name": "brief",
+        "description": "生成新闻简报",
+        "descriptionEn": "Generate news briefing",
+        "usage": "/brief [search <关键词>|sources|config|status]",
+        "examples": [
+          "/brief",
+          "/brief search 人工智能",
+          "/brief sources",
+          "/brief config",
+          "/brief status"
+        ],
+        "aliases": ["简报", "新闻"],
+        "cooldown": 300,
+        "permissions": ["user"]
+      },
+      {
+        "name": "news",
+        "description": "快速查看最新新闻",
+        "descriptionEn": "Quick view latest news",
+        "usage": "/news [tech|finance|global|china]",
+        "examples": [
+          "/news",
+          "/news tech",
+          "/news finance",
+          "/news global"
+        ],
+        "aliases": ["资讯"],
+        "cooldown": 180,
+        "permissions": ["user"]
+      },
+      {
+        "name": "search",
+        "description": "搜索特定主题新闻",
+        "descriptionEn": "Search news by topic",
+        "usage": "/search <关键词>",
+        "examples": [
+          "/search AI",
+          "/search 特朗普",
+          "/search crypto"
+        ],
+        "aliases": ["搜索"],
+        "cooldown": 60,
+        "permissions": ["user"]
+      }
+    ]
+  },
   "schedule": {
     "enabled": true,
     "time": "09:00",
@@ -29,31 +109,74 @@
     "accountId": "somi",
     "format": "markdown",
     "maxNewsCount": 15,
-    "includeImages": true,
-    "includeLinks": true
+    "minNewsCount": 5,
+    "includeImages": false,
+    "includeLinks": true,
+    "includeSummary": true,
+    "includeTimestamp": true
   },
   "summary": {
     "enabled": true,
     "model": "bailian/qwen3.5-plus",
     "maxLength": 300,
     "language": "zh-CN",
-    "style": "concise"
+    "style": "concise",
+    "includeKeyPoints": true
   },
   "filter": {
     "minQuality": 0.6,
     "deduplicate": true,
-    "excludeKeywords": ["八卦", "娱乐", "明星"],
-    "priorityKeywords": ["科技", "财经", "AI", "创业"]
+    "dedupWindow": 86400,
+    "excludeKeywords": [
+      "八卦",
+      "娱乐",
+      "明星",
+      "绯闻"
+    ],
+    "priorityKeywords": [
+      "科技",
+      "财经",
+      "AI",
+      "创业",
+      "投资"
+    ],
+    "mustIncludeSources": [
+      "hackernews",
+      "techcrunch",
+      "bbc-world",
+      "reuters"
+    ]
   },
   "sources": {
     "checkInterval": 3600,
     "maxAge": 86400,
     "retryAttempts": 3,
-    "timeout": 10000
+    "timeout": 10000,
+    "userAgent": "Daily-Brief/0.0.2 (+https://github.com/XHJ-Studio/daily-brief)"
   },
   "limits": {
     "dailyBriefings": 1,
     "breakingNewsPerDay": 5,
-    "maxSources": 50
+    "maxSources": 50,
+    "maxConcurrentFetches": 10
+  },
+  "features": {
+    "breakingNews": {
+      "enabled": true,
+      "keywords": ["突发", "breaking", "紧急", "urgent"],
+      "threshold": 0.9,
+      "notifyImmediately": true
+    },
+    "weekendDigest": {
+      "enabled": true,
+      "maxNews": 10,
+      "onlyTopStories": true
+    },
+    "digest": {
+      "enabled": true,
+      "frequency": "weekly",
+      "day": "sunday",
+      "time": "20:00"
+    }
   }
 }
