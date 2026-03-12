@@ -33,49 +33,75 @@ function generateSummary(content, maxLength = 200) {
 }
 
 /**
- * 格式化简报
+ * 格式化简报（优化版：先汇总内容，末尾附链接）
  * @param {object} data - 简报数据
  * @returns {string} 格式化后的简报
  */
 function formatBriefing(data) {
-  const { date, issue, categories, topStories } = data;
+  const { date, issue, categories, topStories, keyword } = data;
   
   let briefing = `# 📰 小黄鸡每日简报\n`;
   briefing += `**日期**: ${date}\n`;
-  briefing += `**第 ${issue.toString().padStart(3, '0')} 期**\n\n`;
-  briefing += `---\n\n`;
+  briefing += `**第 ${issue.toString().padStart(3, '0')} 期**\n`;
   
-  // 头条新闻
+  if (keyword) {
+    briefing += `**搜索关键词**: ${keyword}\n`;
+  }
+  briefing += `\n---\n\n`;
+  
+  // 头条新闻（只展示标题和摘要，不附链接）
   if (topStories.length > 0) {
-    briefing += `## 🔥 头条新闻\n`;
+    briefing += `## 🔥 头条新闻\n\n`;
     topStories.slice(0, 5).forEach((story, i) => {
-      briefing += `${i + 1}. **[${story.category}] ${story.title}**\n`;
-      briefing += `   ${story.summary}\n`;
-      briefing += `   [阅读更多](${story.link})\n\n`;
+      briefing += `**${i + 1}. [${story.category}] ${story.title}**\n`;
+      briefing += `${story.summary}\n\n`;
     });
     briefing += `---\n\n`;
   }
   
-  // 各类别新闻
+  // 各类别新闻（只展示标题和摘要，不附链接）
   for (const [category, articles] of Object.entries(categories)) {
     if (articles.length === 0) continue;
     
     const categoryName = getCategoryName(category);
     const emoji = getCategoryEmoji(category);
     
-    briefing += `## ${emoji} ${categoryName}\n`;
+    briefing += `## ${emoji} ${categoryName}\n\n`;
     
     articles.slice(0, 3).forEach(article => {
-      briefing += `- **${article.title}**\n`;
-      briefing += `  ${article.summary}\n`;
-      briefing += `  [链接](${article.link})\n\n`;
+      briefing += `**${article.title}**\n`;
+      briefing += `${article.summary}\n\n`;
     });
     
     briefing += `---\n\n`;
   }
   
+  // 链接汇总区（放在末尾）
+  briefing += `## 🔗 新闻来源链接\n\n`;
+  
+  if (topStories.length > 0) {
+    briefing += `**头条新闻**\n`;
+    topStories.slice(0, 5).forEach((story, i) => {
+      briefing += `${i + 1}. ${story.title}\n`;
+      briefing += `   ${story.link}\n\n`;
+    });
+  }
+  
+  for (const [category, articles] of Object.entries(categories)) {
+    if (articles.length === 0) continue;
+    
+    const categoryName = getCategoryName(category);
+    briefing += `**${categoryName}**\n`;
+    
+    articles.slice(0, 3).forEach(article => {
+      briefing += `• ${article.title}\n`;
+      briefing += `  ${article.link}\n\n`;
+    });
+  }
+  
   // 底部信息
-  briefing += `*🤖 由 XDB 自动生成 | 订阅管理：回复 "简报设置"*\n`;
+  briefing += `\n---\n`;
+  briefing += `*🤖 由小黄鸡每日简报自动生成 | 订阅管理：回复 "简报设置"*\n`;
   
   return briefing;
 }

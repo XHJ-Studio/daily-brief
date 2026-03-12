@@ -15,6 +15,8 @@ const path = require('path');
 const fetch = require('../src/fetch');
 const filter = require('../src/filter');
 const summarize = require('../src/summarize');
+const formatSearch = require('../src/format-search');
+const message = require('../src/send');
 const send = require('../src/send');
 
 const config = require('../config.json');
@@ -75,20 +77,22 @@ async function generateBriefing() {
 }
 
 /**
- * 搜索新闻
+ * 搜索新闻（优化版：分两次发送 - 先链接后简报）
  */
-async function handleSearch(query) {
+async function handleSearch(query, context) {
   if (!query) {
     return '❌ 请提供搜索关键词，例如：`/brief search AI`';
   }
   
   try {
+    console.log(`🔍 搜索关键词：${query}`);
+    
     const enabledSources = getAllEnabledSources();
     const allArticles = await fetch.fetchAllSources(enabledSources);
     
     const searchTerms = query.toLowerCase().split(' ');
     const filtered = allArticles.filter(article => {
-      const text = `${article.title} ${article.content}`.toLowerCase();
+      const text = `${article.title} ${article.contentSnippet || article.content || ''}`.toLowerCase();
       return searchTerms.some(term => text.includes(term));
     });
     
@@ -96,13 +100,51 @@ async function handleSearch(query) {
       return `🔍 未找到关于 "${query}" 的新闻`;
     }
     
-    const topResults = filtered.slice(0, 10).map(article => {
-      const summary = summarize.generateSummary(article.content, 100);
-      return `- **${article.title}**\n  ${summary}\n  [链接](${article.link})`;
-    });
+    console.log(`✅ 找到 ${filtered.length} 条相关新闻`);
     
-    return `🔍 找到 ${filtered.length} 条关于 "${query}" 的新闻：\n\n${topResults.join('\n\n')}`;
+    // 生成摘要
+    const withSummary = filtered.map(article => ({
+      ...article,
+      summary: summarize.generateSummary(article.contentSnippet || article.content || '', 150)
+    }));
+    
+    // 第一部分：先发送新闻链接列表
+    const linksContent = formatSearch.formatNewsLinks(withSummary);
+    const linksMessage = `🔗 **"${query}" 相关新闻链接**\n\n${linksContent}`;
+    
+    // 第二部分：再发送秘书式简报
+    const briefingContent = formatSearch.formatSecretaryBriefing(
+      withSummary,
+      query,
+      getFormattedDate()
+    );
+    
+    // 分两次发送
+    if (context && context.channelId) {
+      // 先发送链接
+      await message.send({
+        channel: 'discord',
+        target: context.channelId,
+        message: linksMessage
+      });
+      
+      // 稍等一下再发送简报
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // 再发送简报
+      await message.send({
+        channel: 'discord',
+        target: context.channelId,
+        message: briefingContent
+      });
+      
+      return `✅ 已为您找到 ${filtered.length} 篇相关新闻，分两条消息发送`;
+    }
+    
+    // 如果没有 context，返回合并内容
+    return `${linksMessage}\n\n---\n\n${briefingContent}`;
   } catch (error) {
+    console.error('❌ 搜索失败:', error);
     return `❌ 搜索失败：${error.message}`;
   }
 }

@@ -18,7 +18,20 @@ async function fetchRSS(url, options = {}) {
   const { maxItems = 50, timeout = 10000 } = options;
   
   try {
-    const feed = await parser.parseURL(url, { timeout });
+    // 使用 axios 先获取内容，再解析
+    const response = await axios.get(url, { 
+      timeout,
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; DailyBrief/1.0)'
+      }
+    });
+    
+    const feed = await parser.parseString(response.data);
+    
+    if (!feed || !feed.items || !Array.isArray(feed.items)) {
+      console.warn(`Invalid RSS feed structure from ${url}`);
+      return [];
+    }
     
     return feed.items
       .slice(0, maxItems)
